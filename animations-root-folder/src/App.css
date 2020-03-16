@@ -2,9 +2,60 @@
   text-align: center;
 }
 
-p {
-  opacity: 0;
+/* p {
+  opacity: 100%;
+} */
+
+.footprints{
+  display:flex;
+  align-items: center;
+  flex-direction: column;
 }
+
+#footprint1{
+  width: 5%;
+  margin: 0 2rem 0 0;
+  transform: rotate(20deg);
+}
+
+@keyframes fp{
+  0%{
+    opacity: 0%;
+  }
+  100%{
+    opacity:100%;
+  }
+}
+
+@media{
+  #footprint3{
+    animation: fp 3s;
+    animation-delay: 1s;
+  }
+  #footprint2{
+    animation: fp 2s;
+    animation-delay: 1.5s;
+  }
+  #footprint1{
+    animation: fp 2s;
+    animation-delay: 2s;
+  }
+}
+
+#footprint2{
+  width: 5%;
+  margin: .25rem 0 0 2rem;
+  transform: rotate(20deg);
+}
+
+#footprint3{
+  width: 5%;
+  margin: 0 5rem 0 0;
+  transform: rotate(20deg);
+}
+
+
+
 
 .App-logo {
   height: 40vmin;
@@ -13,26 +64,23 @@ p {
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 2s linear alternate;
   }
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
+  color:#61dafb;
 }
 
 @keyframes App-logo-spin {
+  slidein,
   from {
     transform: rotate(0deg);
   }
